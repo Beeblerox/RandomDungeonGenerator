@@ -259,7 +259,7 @@ class Dungeon
 		{
 			if (i >= 0 && i == Ignore) continue;
 			var check:Rectangle = rooms[i];
-			if ((Room.x + Room.width > check.x) && (Room.x < check.x + check.width) && (Room.y + Room.height > check.y) && (Room.y < check.y + check.height)) return true;
+			if ((Room.x + Room.width >= check.x) && (Room.x <= check.x + check.width) && (Room.y + Room.height >= check.y) && (Room.y <= check.y + check.height)) return true;
         }
 		
         return false;
